@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>День Влюбленных</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-top: 50px;
+        }
+        .highlight {
+            color: pink;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+        }
+        .link-btn {
+            background-color: pink;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+            color: black;
+        }
+        .image-container {
+            margin-top: 50px;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
+            cursor: pointer;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100vh); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+        .heart {
+            position: absolute;
+            color: pink;
+            font-size: 40px;
+            top: -10px;
+            animation: fall 7s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Дорогая Карина</h1>
+    <div class="container">
+        <p>Вот и наступил тот самый долгожданный праздник, день всех <span class="highlight">влюбленных</span>. 
+        Мы прошли этот путь <span class="highlight">вместе</span>, почти ни дня без сообщения. За этот период я многое осознал, и сейчас, в этот волшебный день, 
+        я хочу выразить свою искреннюю и совершенно несокрушимую <span class="highlight">любовь</span> к тебе. Ты — моё <span class="highlight">вдохновение</span>, моя <span class="highlight">радость</span>, 
+        моя самая главная <span class="highlight">мечта</span>, которая сбылась. Я благодарен за каждую минуту, проведённую с <span class="highlight">тобой</span>. 
+        Ты делаешь мою жизнь <span class="highlight">ярче, теплее и душевнее</span>. Спасибо что открыла этот сайт посвященный тебе, спасибо что ты всегда со мной.</p>
+        
+        <a href="https://example.com" class="link-btn" target="_blank">Перейти по ссылке</a>
+    </div>
+    
+    <div class="image-container">
+        <a href="https://example.com" target="_blank">
+            <img src="valentine_image.jpg" alt="Сюрприз">
+        </a>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            heart.style.animationDuration = Math.random() * 4 + 6 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 7000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
