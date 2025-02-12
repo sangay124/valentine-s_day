@@ -41,6 +41,8 @@
         }
         .image-container {
             margin-top: 50px;
+            position: relative;
+            z-index: 1;
         }
         .image-container img {
             width: 100%;
@@ -78,7 +80,7 @@
             document.body.appendChild(heart);
             setTimeout(() => heart.remove(), 7000);
         }
-        setInterval(createHeart, 500);
+        setInterval(createHeart, 100);
     </script>
 </body>
 </html>
